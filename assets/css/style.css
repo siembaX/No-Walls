@@ -1,0 +1,399 @@
+* {
+  font-family: "balooregular";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: rgb(13, 37, 49);
+  font-size: 90px;
+}
+
+h3 {
+  color: rgb(13, 37, 49);
+  font-size: 45px;
+}
+
+span {
+  color: rgb(193, 106, 64);
+}
+
+.row-flip {
+  flex-direction: column-reverse;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+.navbar .navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar .navbar-links li {
+  list-style: none;
+}
+.navbar .navbar-links li a {
+  text-decoration: none;
+  color: rgb(13, 37, 49);
+  padding: 1rem;
+  display: block;
+  font-size: 30px;
+}
+.navbar .navbar-links li a:hover {
+  color: rgb(193, 106, 64);
+}
+.navbar .navbar-links li a.active {
+  color: rgb(193, 106, 64);
+}
+.navbar .toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.navbar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.Billboard-Section {
+  padding: 30px 80px;
+}
+.Billboard-Section .Billboard-all-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Billboard-Section .Billboard-all-images .Billboard-Images {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  gap: 10px;
+}
+.Billboard-Section .Billboard-all-images .Billboard-Images .third-img {
+  display: flex;
+  /*  align-items: end; */
+  height: 250px;
+}
+.Billboard-Section .Billboard-all-images .Billboard-Images .stacked-imgs {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+.Billboard-Section .mirror-imgs {
+  display: flex;
+  /* align-items: first baseline; */
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.About-Section {
+  padding: 120px 80px;
+}
+.About-Section h3 {
+  color: rgb(193, 106, 64);
+  width: 50%;
+}
+.About-Section p {
+  width: 75%;
+}
+
+.Services-Section {
+  padding: 80px;
+  background-color: rgb(14, 43, 60);
+}
+.Services-Section h3 {
+  color: rgb(255, 255, 255);
+}
+.Services-Section .carousel {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  background-color: #cdcdcd;
+}
+.Services-Section .carousel .carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 270px;
+  border: 1px solid #2e2e2e;
+  top: 0;
+  left: 100%;
+}
+.Services-Section .carousel .carousel-item .card {
+  background-color: rgb(17, 47, 65);
+  color: white;
+  border: none;
+}
+.Services-Section .carousel .carousel-item .card .card-header {
+  border: none;
+  border-bottom: 2px solid rgb(193, 106, 64);
+  background-color: none;
+  width: 70%;
+}
+.Services-Section .carousel .carousel-item .card .card-body {
+  border: none;
+}
+.Services-Section .carousel .carousel-item .card .card-footer {
+  border: none;
+}
+.Services-Section .carousel .carousel-item.active {
+  left: 0;
+  transition: all 0.3s ease-out;
+}
+.Services-Section .carousel .carousel-item div {
+  height: 100%;
+}
+.Services-Section .carousel .carousel-item .red {
+  background-image: url(/assets/Images/1b.png);
+}
+.Services-Section .carousel .carousel-item .green {
+  background-color: green;
+}
+.Services-Section .carousel .carousel-item .yellow {
+  background-color: yellow;
+}
+.Services-Section .carousel .carousel-item .violet {
+  background-color: violet;
+}
+
+.MailingList-Section {
+  padding: 120px 80px;
+}
+.MailingList-Section h3 {
+  color: rgb(193, 106, 64);
+}
+.MailingList-Section button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(13, 37, 49);
+  border: none;
+  width: 250px;
+  height: 40px;
+}
+.MailingList-Section .MailingList-Text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.ContactUs-Section {
+  background-color: rgb(231, 233, 235);
+  overflow-x: hidden;
+}
+.ContactUs-Section .inner-section {
+  padding: 80px;
+}
+.ContactUs-Section .inner-section p {
+  width: 50%;
+  text-align: center;
+}
+.ContactUs-Section .inner-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ContactUs-Section .inner-section form input {
+  width: 80%;
+  padding: 12px;
+  border: none;
+}
+.ContactUs-Section .inner-section form textarea {
+  padding: 12px;
+  width: 80%;
+  border: none;
+}
+.ContactUs-Section .inner-section form button {
+  background-color: rgb(13, 37, 49);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 12px;
+  width: 80%;
+  font-size: 30px;
+}
+.ContactUs-Section .inner-section .right-content {
+  transform: translateX(23%);
+}
+
+.contact-details {
+  background-image: url(/assets/Images/bilboard.png);
+  width: 100vw;
+  padding: 130px 90px;
+}
+.contact-details h3 {
+  color: rgb(255, 255, 255);
+}
+.contact-details p {
+  color: rgb(255, 255, 255);
+}
+.contact-details div {
+  display: flex;
+  gap: 200px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+#services {
+  background-color: rgb(0, 56, 79);
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#services h2 {
+  width: 460px;
+}
+#services .services-cards {
+  margin-top: 50px;
+}
+#services .services-cards .mySlides {
+  flex-direction: row;
+  display: none;
+  justify-content: center;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#services .services-cards .card {
+  border-radius: 0px;
+  background-color: rgb(0, 56, 79);
+  box-shadow: 0 20px 100px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+}
+#services .services-cards .card:nth-child(2) {
+  margin: 0px 20px;
+}
+#services .services-cards .card h3 {
+  color: rgb(216, 123, 65);
+  margin-bottom: 0px;
+}
+#services .services-cards .card .line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(216, 123, 65);
+}
+#services .slider {
+  text-align: center;
+}
+#services .slider .dot {
+  cursor: pointer;
+  height: 12px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 100%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  top: 50px;
+}
+#services .slider .dot.active {
+  width: 80px;
+  border-radius: 100px;
+  background-color: rgb(216, 123, 65);
+}
+
+@media screen and (min-width: 777px) and (max-width: 1025px) {
+  .navbar {
+    transform: translateX(35%);
+  }
+  .Billboard-Section {
+    background-color: red;
+    overflow-x: hidden;
+  }
+  .Billboard-Section .Billboard-Images {
+    transform: translateX(20%);
+  }
+  .About-Section {
+    padding: 120px 80px;
+  }
+  .About-Section h3 {
+    color: rgb(193, 106, 64);
+    width: 150%;
+  }
+  .About-Section p {
+    width: 75%;
+  }
+  .ContactUs-Section .inner-section .right-content {
+    align-items: start;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar {
+    transform: translateX(35%);
+  }
+  .Billboard-Section .Billboard-Images {
+    transform: translateX(20%);
+  }
+}
+@media screen and (max-width: 567px) {
+  .navbar .logo-image {
+    width: 10px;
+  }
+  .navbar .navbar-links {
+    display: none;
+  }
+  .About-Section h3 {
+    width: 130%;
+    font-size: 30px;
+  }
+  .About-Section p {
+    width: 120%;
+  }
+  .About-Section .row-flip {
+    flex-direction: column-reverse;
+  }
+  .Billboard-Section {
+    /* background-color: rgb(0, 64, 255); */
+    overflow-x: hidden;
+  }
+  .Billboard-Section .Billboard-Text h1 {
+    font-size: 45px;
+  }
+  .Billboard-Section .Billboard-Text h3 {
+    font-size: 30px;
+  }
+  .Billboard-Section .Billboard-all-images .Billboard-Images {
+    transform: translateX(40%);
+    display: none;
+  }
+  .Billboard-Section .Billboard-all-images .mirror-imgs {
+    display: none;
+  }
+  .MailingList-Section img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 300px;
+    transform: translateX(-8%);
+  }
+  .MailingList-Section .MailingList-Text h3 {
+    font-size: 30px;
+    width: 110%;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

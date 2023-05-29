@@ -1,0 +1,409 @@
+@use './assets/components/' as myVariable;
+
+.Billboard-Section{
+    padding: 30px 80px;
+
+    .Billboard-all-images{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .Billboard-Images{
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+            gap: 10px;
+            
+            .third-img{
+                display: flex;
+               /*  align-items: end; */
+                height: 250px;
+            }
+            .stacked-imgs{
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                /* justify-content: space-between; */
+                
+                
+            }
+         }
+    }
+
+     .mirror-imgs{
+        
+        display: flex;
+        /* align-items: first baseline; */
+        justify-content: space-around;
+        gap: 10px;
+
+     }
+}
+
+//ABOUT SECTION
+
+.About-Section{
+    padding: 120px 80px;
+    h3{
+        color: myVariable.$orange;
+        width: 50%;
+    }
+    p{
+        width: 75%;
+    }
+}
+
+.Services-Section{
+    padding: 80px;
+    background-color: myVariable.$section-blue;
+
+    h3{
+        color: myVariable.$white;
+        
+    }
+
+    .carousel {
+        position: relative;
+        width: 100%;
+        height: 270px;
+        overflow: hidden;
+        background-color: #cdcdcd;
+        .carousel-item {
+          position: absolute;
+          width: 100%;
+          height: 270px;
+          border: 1px solid #2e2e2e;
+          top: 0;
+          left: 100%;
+
+          .card{
+            background-color: myVariable.$light-blue;
+            color: white;
+            border: none;
+            .card-header{
+                border: none;
+                border-bottom: 2px solid myVariable.$orange;
+                background-color: none;
+                width: 70%;
+            }
+            .card-body{
+                border: none;
+            }
+            .card-footer{
+                border: none;
+            }
+          }
+          &.active {
+            left: 0;
+            transition: all 0.3s ease-out;
+          }
+          div {height: 100%;}
+          .red {background-image: url(/assets/Images/1b.png);}
+          .green {background-color: green;}
+          .yellow {background-color: yellow;}
+          .violet {background-color: violet;}
+        }
+      }
+}
+
+.MailingList-Section{
+    padding: 120px 80px;
+    h3{
+        color: myVariable.$orange;
+    }
+
+    button{
+        color: myVariable.$white;
+        background-color: myVariable.$blue;
+        border: none;
+        width: 250px;
+        height: 40px;
+    }
+
+    .MailingList-Text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+.ContactUs-Section{
+    background-color: myVariable.$off-white;
+    overflow-x: hidden;
+    
+    .inner-section{
+        padding: 80px;
+        p{
+            width: 50%;
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input{
+                width: 80%;
+                padding: 12px;
+                border: none;
+            }
+
+            textarea{
+                padding: 12px;
+                width: 80%;
+                border: none;
+            }
+
+            button{
+                background-color: myVariable.$blue;
+                color: myVariable.$white;
+                border: none;
+                padding: 12px;
+                width: 80%;
+                font-size: map-get(myVariable.$font-size , small);
+            }
+        }
+
+        .right-content{
+            transform: translateX(23%);
+        }
+    }
+
+}
+
+.contact-details{
+    background-image: url(/assets/Images/bilboard.png);
+    width: 100vw;
+    padding: 130px 90px;
+    
+    h3{
+        color: myVariable.$white;
+    }
+
+    p{
+        color: myVariable.$white;
+    }
+
+    div{
+        display: flex;
+        gap: 200px;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+#services{
+    background-color:rgb(0, 56, 79);
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    h2{width: 460px;}
+    
+    .services-cards{
+        margin-top: 50px;
+        display: flex;
+
+        .mySlides {
+            display: flex;
+            flex-direction: row;
+            display: none;
+            justify-content: center;
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        } 
+
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        
+        @keyframes fade {
+            from {opacity: .1}
+            to {opacity: 1}
+        }
+       
+        .card{
+            border-radius: 0px;
+            background-color: rgb(0, 56, 79);
+            box-shadow: 0 20px 100px 0 rgba(0,0,0,0.2);
+            padding: 10px;
+            display: flex;
+            gap: 15px;
+
+            &:nth-child(2){
+                margin: 0px 20px;
+            }
+
+            h3{
+                color:rgb(216, 123, 65);
+                margin-bottom: 0px;
+            }
+
+            .line{
+                width:100%;
+                height: 2px;
+                background-color:rgb(216, 123, 65);
+            }
+    
+        }
+    }
+
+    .slider{
+        text-align: center;
+
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 100%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            position: relative;
+            top: 50px;
+
+             &.active {
+                width: 80px;
+                border-radius: 100px;
+                background-color: rgb(216, 123, 65);
+              }
+          }
+    }
+
+}
+
+//MEDIA QUERIES
+
+//portrait tablets
+@media screen and ( min-width: 777px) and (max-width:1025px){
+
+    .navbar{
+        transform: translateX(35%);
+    }
+
+.Billboard-Section{
+    background-color: red;
+    overflow-x: hidden;
+    .Billboard-Images{
+        transform: translateX(20%);
+    }
+}
+
+.About-Section{
+    padding: 120px 80px;
+    h3{
+        color: myVariable.$orange;
+        width: 150%;
+    }
+    p{
+        width: 75%;
+    }
+}
+
+.ContactUs-Section{
+    .inner-section{
+        .right-content{
+            align-items: start;
+        }
+    }
+}
+  
+}
+
+//medium devices media queries
+@media screen and ( min-width: 577px) and (max-width:768px) {
+
+    .navbar{
+        transform: translateX(35%);
+    }
+
+.Billboard-Section{
+    .Billboard-Images{
+        transform: translateX(20%);
+    }
+}
+
+}
+
+//small screens media queries
+
+@media screen and  (max-width: 567px){
+
+    
+
+    .navbar{
+        .logo-image{
+            width: 10px;
+        }
+        .navbar-links{
+            display: none;
+        }
+    }
+
+    .About-Section{
+        h3{
+            width: 130%;
+            font-size: 30px;
+        }
+        p{
+            width: 120%;
+        }
+        .row-flip{
+            flex-direction: column-reverse;
+        }
+    }
+
+.Billboard-Section{
+    /* background-color: rgb(0, 64, 255); */
+    overflow-x: hidden;
+
+    .Billboard-Text{
+        h1{
+            font-size: map-get(myVariable.$font-size , medium);
+        }
+        h3{
+            font-size: map-get(myVariable.$font-size , small);
+        }
+    
+    }
+
+    .Billboard-all-images{
+        .Billboard-Images{
+            transform: translateX(40%);
+            display: none;
+            
+        }
+        .mirror-imgs{
+            display: none;
+        }
+    }
+
+}
+
+.MailingList-Section{
+    img{
+        object-fit: contain;
+        width: 300px;
+        transform: translateX(-8%);
+    }
+    .MailingList-Text{
+        h3{
+            font-size: 30px;
+            width: 110%;
+            text-align: center;
+        }
+    }
+}
+
+}
+
+
+
